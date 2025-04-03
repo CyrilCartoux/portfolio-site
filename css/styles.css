@@ -319,12 +319,11 @@ section h2::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
-    width: 100%;
     box-sizing: border-box;
-    justify-items: center;
 }
 
 .project-card {
@@ -334,9 +333,6 @@ section h2::after {
     border: 1px solid var(--border-color);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform: perspective(1000px) rotateX(0deg);
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 .project-image {
@@ -648,6 +644,49 @@ section h2::after {
     .contact-form {
         padding: 2rem;
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .projects-carousel {
+        margin: 0 -1rem;
+    }
+
+    .carousel-slide {
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        margin: 0;
+        border-radius: 20px;
+        background: var(--light-background);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 375px) {
@@ -656,16 +695,7 @@ section h2::after {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 0;
-        width: 100%;
-    }
-
-    .project-card {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
+        padding: 0 0.5rem;
     }
 
     .project-image {
@@ -865,17 +895,6 @@ section h2::after {
     overflow: hidden;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
 .project-card {
     background: var(--light-background);
     border-radius: 20px;
@@ -992,4 +1011,139 @@ section h2::after {
     background: var(--secondary-color);
     color: var(--text-color);
     transform: translateY(-2px);
+}
+
+/* Desktop/Mobile visibility */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Projects Carousel */
+.projects-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.carousel-prev,
+.carousel-next {
+    background: var(--light-background);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.carousel-prev svg,
+.carousel-next svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .projects-carousel {
+        margin: 0 -1rem;
+    }
+
+    .carousel-slide {
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        margin: 0;
+        border-radius: 20px;
+        background: var(--light-background);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .carousel-slide {
+        padding: 0 0.5rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
 } 
