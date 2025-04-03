@@ -1013,16 +1013,11 @@ section h2::after {
     transform: translateY(-2px);
 }
 
-/* Desktop/Mobile visibility */
-.desktop-only {
-    display: block;
-}
-
 .mobile-only {
     display: none;
 }
 
-/* Projects Carousel */
+/* Projects Carousel (Mobile Only) */
 .projects-carousel {
     position: relative;
     width: 100%;
