@@ -18,6 +18,18 @@ function typeWriter(element, text, speed = 100) {
             setInterval(() => {
                 cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
             }, 500);
+
+            // Affiche le contenu de la section après un court délai
+            setTimeout(() => {
+                const sectionContent = element.parentElement.querySelector('.section-content');
+                if (sectionContent) {
+                    sectionContent.classList.remove('hidden');
+                    // Petit délai pour que le display: none soit bien retiré avant l'animation
+                    setTimeout(() => {
+                        sectionContent.classList.add('visible');
+                    }, 50);
+                }
+            }, 500);
         }
     }
     
@@ -36,12 +48,13 @@ function blinkCursor(element) {
     }, 500);
 }
 
+// Initialisation des effets de frappe
 document.addEventListener('DOMContentLoaded', () => {
+    // Menu mobile
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    // Animation du menu
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
@@ -60,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             typeWriter(element, text);
         }, delay);
         
-        delay += 1000; // Délai de 1 seconde entre chaque commande
+        delay += 2000; // Augmenté le délai à 2 secondes pour laisser le temps à l'animation
     });
 
     // Fermer le menu quand on clique sur un lien
