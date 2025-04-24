@@ -120,7 +120,6 @@ body::after {
   position: absolute;
   right: -10px;
   color: var(--cursor-blink);
-  animation: blink 1s step-end infinite;
 }
 
 .logo:hover {
@@ -469,4 +468,21 @@ main {
   main {
     margin-top: 120px;
   }
+}
+
+/* Typing Effect */
+.typing-text {
+    position: relative;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline;
+    color: var(--terminal-green);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 } 
