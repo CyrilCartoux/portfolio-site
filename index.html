@@ -4,270 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Développeur web freelance spécialisé dans la création de sites web modernes et performants. Services de développement sur-mesure, refonte et optimisation de sites web.">
-    <title>Solide.io | Création de Sites Web Modernes</title>
+    <title>UNDEEFINED | Let's break things beautifully</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="logo">
-                <span class="logo-text">Solide</span>
-                <span class="logo-dot">.io</span>
+                <span class="logo-text">UNDEEFINED</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="#services">$ services</a></li>
+                <li><a href="#projects">$ projects</a></li>
+                <li><a href="#contact">$ contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Transformez votre vision en réalité digitale</h1>
-            <p class="subtitle">Des sites web sur-mesure qui captivent et convertissent</p>
-            <a href="contact.html" class="cta-button">Démarrons votre projet</a>
+        <section class="terminal-section hero">
+            <h2>whoami</h2>
+            <p>We are UNDEEFINED, a boutique dev studio breaking things beautifully.</p>
+            <p class="subtitle">> There's value in the undefined.</p>
         </section>
 
-        <section id="services" class="services">
-            <h2>Mes Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Création de sites web sur-mesure</h3>
-                    <p>Sites vitrines, e-commerce et applications web adaptés à vos besoins spécifiques.</p>
-                    <ul class="service-features">
-                        <li>Design moderne et responsive</li>
-                        <li>Optimisation SEO</li>
-                        <li>Intégration de fonctionnalités avancées</li>
-                    </ul>
+        <section id="services" class="terminal-section">
+            <h2>ls ./services</h2>
+            <div class="service-card">
+                <h3>web-dev</h3>
+                <p>Modern web development with a focus on performance and user experience.</p>
+                <ul class="service-features">
+                    <li>> React / Next.js</li>
+                    <li>> TypeScript</li>
+                    <li>> Node.js</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>smart-contracts</h3>
+                <p>Blockchain development and smart contract auditing.</p>
+                <ul class="service-features">
+                    <li>> Solidity</li>
+                    <li>> Ethereum</li>
+                    <li>> Web3.js</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>consulting</h3>
+                <p>Technical consulting and code review services.</p>
+                <ul class="service-features">
+                    <li>> Architecture</li>
+                    <li>> Security</li>
+                    <li>> Performance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="terminal-section">
+            <h2>ls ./projects</h2>
+            <div class="project-card">
+                <h3>portfolio.js</h3>
+                <p>A modern portfolio website built with Next.js and TypeScript.</p>
+                <div class="project-tags">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind</span>
                 </div>
-                <div class="service-card">
-                    <h3>Refonte & optimisation</h3>
-                    <p>Modernisation de sites existants avec focus sur la performance et l'expérience utilisateur.</p>
-                    <ul class="service-features">
-                        <li>Audit technique</li>
-                        <li>Optimisation des performances</li>
-                        <li>Amélioration de l'UX/UI</li>
-                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>marketplace.py</h3>
+                <p>An e-commerce platform with blockchain integration.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Solidity</span>
                 </div>
-                <div class="service-card">
-                    <h3>Conseil & tutorat</h3>
-                    <p>Accompagnement technique et formation pour vos équipes de développement.</p>
-                    <ul class="service-features">
-                        <li>Formation personnalisée</li>
-                        <li>Support technique</li>
-                        <li>Revue de code</li>
-                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>smart-contracts.sol</h3>
+                <p>A collection of audited smart contracts for DeFi applications.</p>
+                <div class="project-tags">
+                    <span>Solidity</span>
+                    <span>Ethereum</span>
+                    <span>Web3</span>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <h2>Projets Récents</h2>
-            <div class="projects-grid desktop-only">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/ecommerce.jpg" alt="E-commerce Artisanat" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>E-commerce Artisanat</h3>
-                        <p>Plateforme e-commerce pour une marque d'artisanat local avec système de paiement sécurisé et gestion des stocks.</p>
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés</h4>
-                            <ul>
-                                <li>Système de paiement sécurisé</li>
-                                <li>Gestion des stocks en temps réel</li>
-                                <li>Interface administrateur complète</li>
-                            </ul>
-                        </div>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/portfolio.jpg" alt="Portfolio Artistique" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Artistique</h3>
-                        <p>Site vitrine pour un photographe professionnel avec galerie interactive et système de réservation.</p>
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés</h4>
-                            <ul>
-                                <li>Galerie photo interactive</li>
-                                <li>Système de réservation en ligne</li>
-                                <li>Optimisation des performances</li>
-                            </ul>
-                        </div>
-                        <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/dashboard.jpg" alt="Application de Gestion" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Application de Gestion</h3>
-                        <p>Outil de gestion pour une startup tech avec tableau de bord personnalisé et rapports automatisés.</p>
-                        <div class="project-features">
-                            <h4>Fonctionnalités clés</h4>
-                            <ul>
-                                <li>Tableau de bord personnalisé</li>
-                                <li>Génération de rapports automatisés</li>
-                                <li>Analyse de données en temps réel</li>
-                            </ul>
-                        </div>
-                        <div class="project-tags">
-                            <span>Vue.js</span>
-                            <span>Firebase</span>
-                            <span>Chart.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-carousel mobile-only">
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="assets/ecommerce.jpg" alt="E-commerce Artisanat" loading="lazy">
-                                </div>
-                                <div class="project-content">
-                                    <h3>E-commerce Artisanat</h3>
-                                    <p>Plateforme e-commerce pour une marque d'artisanat local avec système de paiement sécurisé et gestion des stocks.</p>
-                                    <div class="project-features">
-                                        <h4>Fonctionnalités clés</h4>
-                                        <ul>
-                                            <li>Système de paiement sécurisé</li>
-                                            <li>Gestion des stocks en temps réel</li>
-                                            <li>Interface administrateur complète</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tags">
-                                        <span>React</span>
-                                        <span>Node.js</span>
-                                        <span>MongoDB</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="assets/portfolio.jpg" alt="Portfolio Artistique" loading="lazy">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Portfolio Artistique</h3>
-                                    <p>Site vitrine pour un photographe professionnel avec galerie interactive et système de réservation.</p>
-                                    <div class="project-features">
-                                        <h4>Fonctionnalités clés</h4>
-                                        <ul>
-                                            <li>Galerie photo interactive</li>
-                                            <li>Système de réservation en ligne</li>
-                                            <li>Optimisation des performances</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tags">
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="assets/dashboard.jpg" alt="Application de Gestion" loading="lazy">
-                                </div>
-                                <div class="project-content">
-                                    <h3>Application de Gestion</h3>
-                                    <p>Outil de gestion pour une startup tech avec tableau de bord personnalisé et rapports automatisés.</p>
-                                    <div class="project-features">
-                                        <h4>Fonctionnalités clés</h4>
-                                        <ul>
-                                            <li>Tableau de bord personnalisé</li>
-                                            <li>Génération de rapports automatisés</li>
-                                            <li>Analyse de données en temps réel</li>
-                                        </ul>
-                                    </div>
-                                    <div class="project-tags">
-                                        <span>Vue.js</span>
-                                        <span>Firebase</span>
-                                        <span>Chart.js</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-prev" aria-label="Projet précédent">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6"/>
-                        </svg>
-                    </button>
-                    <div class="carousel-dots"></div>
-                    <button class="carousel-next" aria-label="Projet suivant">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-                    </button>
-                </div>
+        <section id="contact" class="terminal-section">
+            <h2>send -m "Hello"</h2>
+            <p>Ready to start your project? Let's break things beautifully together.</p>
+            <div class="contact-info">
+                <p>> Email: <a href="mailto:contact@undeefined.dev">contact@undeefined.dev</a></p>
+                <p>> GitHub: <a href="https://github.com/CyrilCartoux" target="_blank">@CyrilCartoux</a></p>
+                <p>> Location: Paris, France</p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>À propos</h3>
-                <p>Développeur web freelance avec plus de 5 ans d'expérience, spécialisé dans la création de sites web modernes et performants.</p>
-                <div class="footer-skills">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">MongoDB</span>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul class="contact-info">
-                    <li><a href="mailto:contact@devweb.com">contact@devweb.com</a></li>
-                    <li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
-                    <li>Paris, France</li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://github.com/CyrilCartoux" target="_blank" rel="noopener noreferrer" aria-label="Mon profil GitHub">
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/cyril-c-a6a3351a2/" target="_blank" rel="noopener noreferrer" aria-label="Mon profil LinkedIn">
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
+            <p class="footer-text">¯\_(ツ)_/¯ // this is fine</p>
+            <div class="social-links">
+                <a href="https://github.com/CyrilCartoux" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/cyril-c-a6a3351a2/" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Solide.io. Tous droits réservés.</p>
+            <p>&copy; 2024 UNDEEFINED | 404. perfection not found.</p>
         </div>
     </footer>
 
