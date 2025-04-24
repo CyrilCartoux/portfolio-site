@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.3 // Déclenche quand 30% de la section est visible
+        threshold: 0.3
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -80,7 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     typingText.dataset.animated = 'true';
                     const text = typingText.textContent;
                     typingText.textContent = '';
-                    typeWriter(typingText, text);
+                    
+                    // Délai spécifique pour la section services
+                    const delay = entry.target.id === 'services' ? 2000 : 0;
+                    
+                    setTimeout(() => {
+                        typeWriter(typingText, text);
+                    }, delay);
                 }
             }
         });
