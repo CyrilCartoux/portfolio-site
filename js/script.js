@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     typingText.textContent = '';
                     
                     // Délai spécifique pour la section services
-                    const delay = entry.target.id === 'services' ? 2000 : 0;
+                    const delay = entry.target.id === 'services' ? 3000 : 0;
                     
                     setTimeout(() => {
                         typeWriter(typingText, text);
