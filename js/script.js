@@ -61,20 +61,46 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Effet de frappe pour les commandes
-    const typingElements = document.querySelectorAll('.typing-text');
-    let delay = 0;
-    
-    typingElements.forEach((element, index) => {
-        const text = element.textContent;
-        element.textContent = ''; // Vide le contenu initial
-        
-        setTimeout(() => {
-            typeWriter(element, text);
-        }, delay);
-        
-        delay += 2000; // Augmenté le délai à 2 secondes pour laisser le temps à l'animation
+    // Configuration de l'Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // Déclenche quand 30% de la section est visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Affiche la section
+                entry.target.classList.add('visible');
+                
+                // Déclenche l'animation de la commande
+                const typingText = entry.target.querySelector('.typing-text');
+                if (typingText && !typingText.dataset.animated) {
+                    typingText.dataset.animated = 'true';
+                    const text = typingText.textContent;
+                    typingText.textContent = '';
+                    typeWriter(typingText, text);
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observer chaque section cachée
+    document.querySelectorAll('.hidden-section').forEach(section => {
+        observer.observe(section);
     });
+
+    // Animer uniquement la première section (whoami) immédiatement
+    const firstSection = document.querySelector('.terminal-section:not(.hidden-section)');
+    if (firstSection) {
+        const firstTypingText = firstSection.querySelector('.typing-text');
+        if (firstTypingText) {
+            const firstText = firstTypingText.textContent;
+            firstTypingText.textContent = '';
+            typeWriter(firstTypingText, firstText);
+        }
+    }
 
     // Fermer le menu quand on clique sur un lien
     document.querySelectorAll('.nav-links a').forEach(link => {
