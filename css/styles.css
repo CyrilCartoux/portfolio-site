@@ -250,7 +250,7 @@ main {
   background: var(--charcoal-grey);
   border: 1px solid var(--soft-border);
   padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transition: all 0.3s ease;
 }
 
@@ -259,9 +259,64 @@ main {
   box-shadow: 0 0 10px rgba(0, 255, 156, 0.2);
 }
 
-.service-card h3 {
-  color: var(--terminal-green);
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.service-header h3 {
+  color: var(--terminal-green);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.service-status {
+  color: var(--glitch-green);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+.service-description {
+  color: var(--mono-white);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.service-stack {
+  background: var(--code-grey);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.stack-label {
+  color: var(--terminal-green);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  color: var(--mono-white);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.service-features li::before {
+  content: ">";
+  color: var(--terminal-green);
+  position: absolute;
+  left: 0;
 }
 
 /* Project Cards */
